@@ -1,0 +1,6 @@
+{
+  "name": "Premium Teas E-Commerce",
+  "description": "A premium, modern, responsive e-commerce website inspired by luxurious tea brands, featuring products, category filters, detailed product views, and seamless WhatsApp order flow.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
