@@ -1,0 +1,5 @@
+This directory is for your local product images.
+You can upload your product images here (e.g. "imperial_darjeeling.jpg").
+
+In `/src/data/products.ts`, you will reference them directly like this:
+"/images/imperial_darjeeling.jpg"

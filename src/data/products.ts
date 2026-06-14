@@ -5,23 +5,107 @@ export const CATEGORIES: Category[] = [
     id: "classics",
     name: "Signature Classics",
     description: "Handpicked single-origin whole leaf black & green teas from iconic Himalayan estates.",
-    image: "https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&q=80&w=600",
+    image: "/images/Premium Assam Blend Tea Powder collection.png",
   },
   {
     id: "wellness",
     name: "Wellness & Herbal",
     description: "Traditional Ayurvedic botanical blends, roots, and flowers for holistic healing.",
-    image: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&q=80&w=600",
+    image: "/images/Green_Tea_Herbal_Tea.png",
   },
   {
     id: "exotics",
-    name: "Exotics & Matchas",
-    description: "Rare ceremonial matchas, magical elixirs, and visual floral loose-leaf masterpieces.",
-    image: "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&q=80&w=600",
+    name: "Premium masala and elaichi tea bags",
+    description: "Perfect blends of Granules & Dust tea powder from high-altitude Assam gardens with export-grade real Elaichi and premium Tea Masala.",
+    image: "/images/Premium_masala_and_elaichi_tea_bags.png",
   },
 ];
 
 export const PRODUCTS: Product[] = [
+  {
+    id: "elaichi-special-premium-tea",
+    name: "Elaichi Special Premium Tea",
+    category: "exotics",
+    price: 389,
+    description: "Elaichi Special Premium Tea is a perfect blend of Granules & Dust tea Powder of Assams high altitude gardens with export grade real Elaichi. Its a perferct blend of Strong Liquor, Golden Color, Soothing Aroma and Perfect Thickness.",
+    longDescription: "Curated for the ultimate tea enthusiast, our Elaichi Special Premium Tea marries the strong, robust character of premium Granules & Dust tea powder from high-altitude Assam tea gardens with export-grade aromatic cardamom (Elaichi). It offers an exceptional balance of strong liquor, striking golden hue, and a highly soothing wellness aroma to elevate your daily tea ritual. Perfectly thick and satisfying.",
+    images: [
+      "/images/Premium_masala_and_elaichi_tea_bags.png"
+    ],
+    rating: 4.9,
+    reviewsCount: 145,
+    isBestSeller: true,
+    benefits: [
+      "Infused with real export-grade green cardamom for authentic cooling digestive support",
+      "High-altitude Assam granules & dust ensure a dark, bold, full-bodied liquor",
+      "Rich aroma acts as a natural calmative and stress-reliever",
+      "Specially crafted for perfect thickness when brewed with milk and sugar"
+    ],
+    specifications: [
+      { label: "Origin", value: "High-Altitude Assam Gardens, India" },
+      { label: "Ingredients", value: "Assam Granules & Dust Tea, Export-grade Green Cardamom" },
+      { label: "Caffeine Level", value: "High" },
+      { label: "Steep Time", value: "3 - 5 minutes at 100°C" }
+    ]
+  },
+  {
+    id: "masala-special-premium-tea",
+    name: "Masala Special Premium Tea",
+    category: "exotics",
+    price: 399,
+    description: "Masala Special Premium Tea is a perfect blend of Granules & Dust tea Powder of Assams high altitude gardens with perfect Tea masala. Its a perferct blend of Strong Liquor, Golden Color, Soothing Aroma and Perfect Thickness.",
+    longDescription: "Experience the warm embrace of traditional Indian spices. Our Masala Special Premium Tea combines robust granules and dust tea powder sourced from Assam's high-altitude estates with a finely measured blend of classic spices. Together, they steep into a tea with strong liquor, a brilliant golden color, an incredibly soothing spiced aroma, and the perfect rich thickness for traditional Chai.",
+    images: [
+      "/images/Premium_masala_and_elaichi_tea_bags.png"
+    ],
+    rating: 4.9,
+    reviewsCount: 172,
+    isNew: true,
+    benefits: [
+      "A powerful blend of warming spices (Ginger, Cardamom, Black Pepper, Cloves)",
+      "Enhances immunity and acts as a comforting seasonal throat soother",
+      "Delivers deep golden colors and intense, satisfying malty profiles",
+      "Smoothly balanced for making authentic, spiced kadak milk tea"
+    ],
+    specifications: [
+      { label: "Origin", value: "High-Altitude Assam Gardens, India" },
+      { label: "Ingredients", value: "Assam CTC Granules & Dust, Premium Spices (Ginger, Cardamom, Cinnamon, Clove, Black Pepper)" },
+      { label: "Caffeine Level", value: "High" },
+      { label: "Steep Time", value: "3 - 5 minutes at 100°C" }
+    ]
+  },
+  {
+    id: "premium-assam-blend",
+    name: "Premium Assam Blend Tea Powder",
+    category: "classics",
+    price: 349,
+    description: "Our signature blend of selected high-quality orthodox and CTC leaves from Assam estates. Clean, robust, malty with a rich golden color.",
+    longDescription: "Sourced from the finest rain-drenched tea gardens of Upper Assam, our Premium Assam Blend is a masterfully balanced combination of CTC and orthodox leaves. Designed specifically for the perfect cup of traditional Indian Chai or a strong morning tea, it offers an incredible, robust, malty body with deep amber tones and an invigorating aroma.",
+    images: [
+      "/images/Premium Assam Blend Tea Powder collection.png",
+      "/images/Premium_Assam_Blend_Tea_Powder_1.jpg",
+      "/images/Premium_Assam_Blend_Tea_Powder_2.jpg",
+      "/images/Premium_Assam_Blend_Tea_Powder_3.jpg",
+      "/images/Premium_Assam_Blend_Tea_Powder_4.jpg",
+      "/images/Premium_Assam_Blend_Tea_Powder_5.jpg"
+    ],
+    rating: 4.9,
+    reviewsCount: 312,
+    isBestSeller: true,
+    benefits: [
+      "Rich in natural antioxidants that protect from oxidative stress",
+      "Robust caffeine content offers clean morning focus and alertness",
+      "Pairs beautifully with milk and traditional Indian spices like cardamom and ginger",
+      "Handpicked and carefully processed to preserve premium aroma and taste"
+    ],
+    specifications: [
+      { label: "Origin", value: "Upper Assam Tea Estates, Assam, India" },
+      { label: "Grade", value: "Premium CTC & Orthodox Blend" },
+      { label: "Ingredients", value: "100% Pure Assam Tea Powder" },
+      { label: "Caffeine Level", value: "High" },
+      { label: "Steep Time", value: "3 - 5 minutes at 100°C" }
+    ]
+  },
   {
     id: "imperial-darjeeling",
     name: "Imperial Darjeeling First Flush",
