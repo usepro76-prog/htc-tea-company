@@ -2,22 +2,28 @@ import { Product, Category, Testimonial } from "../types";
 
 export const CATEGORIES: Category[] = [
   {
-    id: "classics",
-    name: "Signature Classics",
-    description: "Handpicked single-origin whole leaf black & green teas from iconic Himalayan estates.",
+    id: "Assam-Blend",
+    name: "Assam Blend Tea Powder",
+    description: "Premium Assam high-altitude granules and dust tea powder for strong, thick chai.",
     image: "/images/Premium Assam Blend Tea Powder collection.png",
   },
   {
-    id: "wellness",
-    name: "Wellness & Herbal",
-    description: "Traditional Ayurvedic botanical blends, roots, and flowers for holistic healing.",
+    id: "Greem-Herbal-Tea",
+    name: "Green & Herbal Tea",
+    description: "Fresh organic green tea leaves blended with restorative Ayurvedic herbs for holistic wellness.",
     image: "/images/Green_Tea_Herbal_Tea.png",
   },
   {
-    id: "exotics",
-    name: "Premium masala and elaichi tea bags",
-    description: "Perfect blends of Granules & Dust tea powder from high-altitude Assam gardens with export-grade real Elaichi and premium Tea Masala.",
+    id: "masala-elaichi",
+    name: "Premium masala and elaichi Tea Bugs",
+    description: "Robust Assam tea powder blended with export grade elaichi and aromatic spices.",
     image: "/images/Premium_masala_and_elaichi_tea_bags.png",
+  },
+  {
+    id: "instant-coffee",
+    name: "Instant Coffee",
+    description: "100% Pure Arabica Instant Coffee Natural Flavor - 50 gms",
+    image: "/images/Instant_Coffee_collections.png",
   },
 ];
 
@@ -25,7 +31,7 @@ export const PRODUCTS: Product[] = [
   {
     id: "elaichi-special-premium-tea",
     name: "Elaichi Special Premium Tea",
-    category: "exotics",
+    category: "masala-elaichi",
     price: 389,
     description: "Elaichi Special Premium Tea is a perfect blend of Granules & Dust tea Powder of Assams high altitude gardens with export grade real Elaichi. Its a perferct blend of Strong Liquor, Golden Color, Soothing Aroma and Perfect Thickness.",
     longDescription: "Curated for the ultimate tea enthusiast, our Elaichi Special Premium Tea marries the strong, robust character of premium Granules & Dust tea powder from high-altitude Assam tea gardens with export-grade aromatic cardamom (Elaichi). It offers an exceptional balance of strong liquor, striking golden hue, and a highly soothing wellness aroma to elevate your daily tea ritual. Perfectly thick and satisfying.",
@@ -51,7 +57,7 @@ export const PRODUCTS: Product[] = [
   {
     id: "masala-special-premium-tea",
     name: "Masala Special Premium Tea",
-    category: "exotics",
+    category: "masala-elaichi",
     price: 399,
     description: "Masala Special Premium Tea is a perfect blend of Granules & Dust tea Powder of Assams high altitude gardens with perfect Tea masala. Its a perferct blend of Strong Liquor, Golden Color, Soothing Aroma and Perfect Thickness.",
     longDescription: "Experience the warm embrace of traditional Indian spices. Our Masala Special Premium Tea combines robust granules and dust tea powder sourced from Assam's high-altitude estates with a finely measured blend of classic spices. Together, they steep into a tea with strong liquor, a brilliant golden color, an incredibly soothing spiced aroma, and the perfect rich thickness for traditional Chai.",
@@ -77,10 +83,10 @@ export const PRODUCTS: Product[] = [
   {
     id: "premium-assam-blend",
     name: "Premium Assam Blend Tea Powder",
-    category: "classics",
+    category: "Assam-Blend",
     price: 349,
-    description: "Our signature blend of selected high-quality orthodox and CTC leaves from Assam estates. Clean, robust, malty with a rich golden color.",
-    longDescription: "Sourced from the finest rain-drenched tea gardens of Upper Assam, our Premium Assam Blend is a masterfully balanced combination of CTC and orthodox leaves. Designed specifically for the perfect cup of traditional Indian Chai or a strong morning tea, it offers an incredible, robust, malty body with deep amber tones and an invigorating aroma.",
+    description: "Premium Assam Blend Tea Powder is a perfect blend of Granules & Dust tea Powder of Assam's high altitude gardens. It's a perfect blend of Strong Liquor, Golden Color, Soothing Aroma and Perfect Thickness.",
+    longDescription: "Sourced from the finest high-altitude gardens of Assam, our Premium Assam Blend Tea Powder is a masterfully crafted combination of premium granules and dust tea leaves. Designed specifically to brew the perfect cup of traditional Kadak Chai, it delivers an incredible, robust liquor with deep amber tones, a beautiful golden color, a soothing aroma, and the perfect rich thickness.",
     images: [
       "/images/Premium Assam Blend Tea Powder collection.png",
       "/images/Premium_Assam_Blend_Tea_Powder_1.jpg",
@@ -93,245 +99,71 @@ export const PRODUCTS: Product[] = [
     reviewsCount: 312,
     isBestSeller: true,
     benefits: [
-      "Rich in natural antioxidants that protect from oxidative stress",
-      "Robust caffeine content offers clean morning focus and alertness",
-      "Pairs beautifully with milk and traditional Indian spices like cardamom and ginger",
-      "Handpicked and carefully processed to preserve premium aroma and taste"
+      "Optimal blend of granules & dust from high-altitude estates for extra strong flavor",
+      "Delivers the iconic deep golden amber color and robust, full-bodied liquor",
+      "Soothes and energizes with every sip, offering a refreshing premium aroma",
+      "Specifically crafted for the perfect thickness when brewed with milk and sugar"
     ],
     specifications: [
-      { label: "Origin", value: "Upper Assam Tea Estates, Assam, India" },
-      { label: "Grade", value: "Premium CTC & Orthodox Blend" },
+      { label: "Origin", value: "High-Altitude Assam Tea Estates, India" },
+      { label: "Grade", value: "Premium Granules & Dust CTC Blend" },
       { label: "Ingredients", value: "100% Pure Assam Tea Powder" },
       { label: "Caffeine Level", value: "High" },
       { label: "Steep Time", value: "3 - 5 minutes at 100°C" }
     ]
   },
   {
-    id: "imperial-darjeeling",
-    name: "Imperial Darjeeling First Flush",
-    category: "classics",
-    price: 699,
-    description: "The 'Champagne of Teas' harvested in late spring. Bright, crisp with subtle notes of muscatel grapes and spring moss.",
-    longDescription: "Sourced directly from the misty peaks of the high-altitude Okauti and Castleton estates, our First Flush Darjeeling is highly prized by connoisseurs around the world. These young, tender leaves are handpicked at dawn to capture their pristine floral sweetness and exquisite clarity. Every sip brings a wave of summer field nectar and light wood smoke.",
+    id: "hind-special-premium-tea",
+    name: "Hind Special Premium Tea",
+    category: "Assam-Blend",
+    price: 400,
+    description: "Hind Special Premium Tea is a perfect blend of Granules & Dust tea Powder of Assams high altitude gardens. Its a perferct blend of Strong Liquor, Golden Color, Soothing Aroma and Perfect Thickness.",
+    longDescription: "Sourced from the premium gardens of Assam, Hind Special Premium Tea is an exceptional, custom-crafted blend of high-altitude Granules & Dust tea powder. Specially formulated to meet the highest expectations of traditional Chai lovers, it delivers a stunning golden color, extra strong liquor, a deeply soothing natural aroma, and the perfect rich thickness for an unforgettable daily brew.",
     images: [
-      "https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1563822249548-9a72b6353cd1?auto=format&fit=crop&q=80&w=800"
-    ],
-    rating: 4.9,
-    reviewsCount: 248,
-    isBestSeller: true,
-    benefits: [
-      "Rich in protective bio-active flavonoids",
-      "Gently boots metabolism and daily focus",
-      "Soothes digestion with subtle sweetness",
-      "Natural clean energy without coffee jitters"
-    ],
-    specifications: [
-      { label: "Origin", value: "Darjeeling, West Bengal, India" },
-      { label: "Altitude", value: "4,500 - 6,000 Feet" },
-      { label: "Ingredients", value: "100% Camellia Sinensis (Black Tea Leaves)" },
-      { label: "Caffeine Level", value: "Medium-High" },
-      { label: "Steep Time", value: "3 - 4 minutes at 90°C" }
-    ]
-  },
-  {
-    id: "golden-turmeric-ginger",
-    name: "Veda Glow Golden Turmeric Ginger",
-    category: "wellness",
-    price: 499,
-    description: "A warming Ayurvedic infusion of organically farmed turmeric root, spicy ginger, and coarse black pepper for peak vitality.",
-    longDescription: "Unlock ancient wellness secrets with this robust blend of golden turmeric root harvested from pristine organic farms in southern India, masterfully balanced with spicy ginger shards, lemongrass, and essential Indian black pepper. The black pepper is crucial: its piperine naturally enhances turmeric absorption, giving you the ultimate daily immunity shield.",
-    images: [
-      "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&q=80&w=800"
+      "/images/Hind_Special_Premium_Tea.jpeg"
     ],
     rating: 4.8,
-    reviewsCount: 412,
-    isBestSeller: true,
-    benefits: [
-      "Highly effective natural anti-inflammatory elixir",
-      "Promotes pristine glow, clear skin and digestive health",
-      "Enhances immunity and metabolic detoxification",
-      "100% Caffeine-Free - perfect for evening recovery"
-    ],
-    specifications: [
-      { label: "Origin", value: "Wayand & Alleppey region, India" },
-      { label: "Type", value: "Ayurvedic Botanical Herbal Tea" },
-      { label: "Ingredients", value: "Turmeric, Ginger, Lemongrass, Black Pepper" },
-      { label: "Caffeine Level", value: "Zero (Caffeine-Free)" },
-      { label: "Steep Time", value: "5 minutes at 100°C" }
-    ]
-  },
-  {
-    id: "himalayan-pure-green",
-    name: "Pure Himalayan Whole Leaf Green Tea",
-    category: "classics",
-    price: 399,
-    description: "Delicate organic green tea leaves from the high Himalayas. Exceptionally smooth, sweet, and rich in natural antioxidants.",
-    longDescription: "Cultivated in the clean valleys and mineral-dense soil of the high Himalayas, our pure green tea is steam-fired to prevent oxidation. This gentle process locks in the leaves' rich emerald chlorophyll and earthy sweet undertones. It features none of the bitter green tea aftertaste—only clean, crisp, alpine refreshing purity.",
-    images: [
-      "https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&q=80&w=800"
-    ],
-    rating: 4.7,
-    reviewsCount: 189,
+    reviewsCount: 165,
     isNew: true,
     benefits: [
-      "Extremely rich in EGCG catechins and natural antioxidants",
-      "Assists in healthy weight management and wellness",
-      "Cleanses toxins and hydrates the body naturally",
-      "Mild caffeine content for a calm, sustainable energy boost"
+      "Optimal blend of granules & dust from high-altitude estates for an extra strong, crisp flavor",
+      "Delivers the iconic deep golden amber color and robust, full-bodied liquor",
+      "Filled with a soothing natural tea aroma that acts as a great daily revitalizer",
+      "Specifically crafted for the perfect thickness when brewed with milk and sugar"
     ],
     specifications: [
-      { label: "Origin", value: "High-Altitude Uttarakhand Valley, India" },
-      { label: "Altitude", value: "5,000 - 6,500 Feet" },
-      { label: "Ingredients", value: "Organic Camellia Sinensis (Green Tea)" },
-      { label: "Caffeine Level", value: "Low-Medium" },
-      { label: "Steep Time", value: "2 - 3 minutes at 80°C (Avoid boiling water)" }
-    ]
-  },
-  {
-    id: "exotic-kashmiri-kahwa",
-    name: "Royal Kashmiri Kahwa & Saffron",
-    category: "wellness",
-    price: 599,
-    description: "An exotic celebratory formulation of green tea leaves, crushed green cardamoms, cinnamon bark, almonds, and Kashmiri Saffron strands.",
-    longDescription: "Indulge in the regal traditions of Kashmir. Our authentic Kahwa blend starts with whole green tea leaves, carefully balanced with warm fragments of sweet cinnamon, hand-ground pods of green cardamom, fine almond slivers, and real threads of premium Kashmiri red saffron. It steeps into a beautiful golden elixir filled with robust floral warmth.",
-    images: [
-      "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=800"
-    ],
-    rating: 4.9,
-    reviewsCount: 320,
-    isBestSeller: true,
-    benefits: [
-      "Instantly warms the body and alleviates seasonal congestion",
-      "Saffron-infused compounds elevate mood and soothe stress",
-      "Almonds and spices support robust metabolic activity",
-      "A luxurious after-meal digestif filled with natural spices"
-    ],
-    specifications: [
-      { label: "Origin", value: "Kashmir Valley Estate, India" },
-      { label: "Ingredients", value: "Green Tea, Saffron, Cardamom, Cinnamon, Almond Shards" },
-      { label: "Caffeine Level", value: "Low" },
-      { label: "Steep Time", value: "3 - 5 minutes at 85°C" },
-      { label: "Serving Suggestion", value: "Serve hot, sweetened with organic white honey" }
-    ]
-  },
-  {
-    id: "uji-matcha-ceremonial",
-    name: "Ceremonial Uji Japanese Matcha",
-    category: "exotics",
-    price: 1199,
-    description: "Stone-ground, shade-grown ceremonial-grade Japanese green tea from the historic mountains of Uji. Incredibly rich umami finish.",
-    longDescription: "Exclusively imported for tea connoisseurs, our Ceremonial Grade Matcha is crafted from tencha green tea leaves shade-grown for 4 weeks in historic Uji, Kyoto. This stimulates intense L-Theanine production. Stoneground into an ultra-fine vibrant green powder, it produces an incomparable thick froth, velvety texture, and a profound botanical umami taste.",
-    images: [
-      "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&q=80&w=800"
-    ],
-    rating: 4.9,
-    reviewsCount: 154,
-    isBestSeller: true,
-    benefits: [
-      "Unrivaled focus: L-theanine triggers long-lasting calm alertness",
-      "137 times the antioxidants of brewed common green tea",
-      "Boosts resting energy expenditure and calorie burning",
-      "Powerful full-body detoxifier due to pristine shade-growing"
-    ],
-    specifications: [
-      { label: "Origin", value: "Wazuka Hills, Uji, Kyoto, Japan" },
-      { label: "Cultivar", value: "Yabukita & Sayamakaori (First Harvest)" },
-      { label: "Ingredients", value: "100% Stone-Ground Organic Tencha Matcha Green Tea" },
-      { label: "Caffeine Level", value: "High (Sustainable release)" },
-      { label: "Preparation", value: "Whisk 1.5g with 70ml hot water (75°C) in zig-zag motion" }
-    ]
-  },
-  {
-    id: "blue-butterfly-pea-tea",
-    name: "Blue Butterfly Pea & Lemongrass Blend",
-    category: "exotics",
-    price: 449,
-    description: "A striking cobalt tea crafted from Clitoria ternatea flowers and fresh lemongrass. Turns a vivid purple with a dash of lime.",
-    longDescription: "Add theatre to your teacup! Crafted from organic wild-grown Butterfly Pea flowers and aromatic dried lemongrass, this caffeine-free botanical infusion features a gorgeous royal blue color. Squeeze in a twist of lemon juice and watch the natural pH change trigger a magical transition into a stunning royal violet-purple hue.",
-    images: [
-      "https://images.unsplash.com/photo-1563822249548-9a72b6353cd1?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?auto=format&fit=crop&q=80&w=800"
-    ],
-    rating: 4.6,
-    reviewsCount: 198,
-    isNew: true,
-    benefits: [
-      "Abundant in anthocyanins which stimulate healthy skin and hair collagen",
-      "Highly cooling digestive tonic - spectacular served iced of a summer morning",
-      "A complete caffeine-free sensory experience for stress-relief",
-      "Natural detoxifying fluid and circulatory helper"
-    ],
-    specifications: [
-      { label: "Origin", value: "North Bengal hills & Kerala, India" },
-      { label: "Ingredients", value: "Butterfly Pea Flower, Lemongrass Shards" },
-      { label: "Caffeine Level", value: "Zero (Caffeine-Free)" },
-      { label: "Steep Time", value: "4 - 5 minutes at 95°C" },
-      { label: "Magical Reaction", value: "Changes blue-to-purple upon contact with citric juices" }
-    ]
-  },
-  {
-    id: "midnight-chamomile-lavender",
-    name: "Midnight Chamomile Lavender Dream",
-    category: "wellness",
-    price: 479,
-    description: "Premium pure Egyptian organic Chamomile blossoms integrated with fragrant French lavender spikes and sweet mint.",
-    longDescription: "The ultimate pre-bedtime sanctuary. We blend the highest food-grade chamomile blossoms from Egypt's fertile Nile valleys, celebrated for their honeyed sweet scent, with culinary French lavender blossoms and a hint of refreshing spearmint leaves. Perfectly curated to decelerate a busy mind and guide you into a state of blissful, uninterrupted sleep.",
-    images: [
-      "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&q=80&w=800"
-    ],
-    rating: 4.8,
-    reviewsCount: 295,
-    benefits: [
-      "Deeply relaxes the nervous system and eases mental tension",
-      "Reduces insomnia and promotes deep restful sleep cycles",
-      "Eases late-night mild digestive discomfort",
-      "A gentle warm cup with sweet floral-lavender aromatherapeutic benefits"
-    ],
-    specifications: [
-      { label: "Origin", value: "Fayoum Oasis, Egypt & Provence, France" },
-      { label: "Ingredients", value: "Chamomile Flowers, Lavender Flowers, Spearmint" },
-      { label: "Caffeine Level", value: "Zero (Caffeine-Free)" },
-      { label: "Steep Time", value: "4 - 6 minutes at 95°C" }
-    ]
-  },
-  {
-    id: "royal-earl-grey",
-    name: "Royal Assam Earl Grey Citrus",
-    category: "classics",
-    price: 499,
-    description: "Bold handpicked Assam black tea leaves sprayed with natural essential oil of real Italian Bergamot Orange.",
-    longDescription: "A sophisticated reinvention of a classic heirloom. We start with rich, malty, full-bodied golden black tea tips from Upper Assam's boutique plantations, then spray them with cold-pressed pure bergamot essential oil sourced straight from sunny orchards in Calabria, Italy. Bold, punchy, citrusy, with a gorgeous woody malty base.",
-    images: [
-      "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&q=80&w=800"
-    ],
-    rating: 4.7,
-    reviewsCount: 167,
-    benefits: [
-      "Increases alert wakefulness and logical brain function",
-      "Bergamot oil contains natural aromatherapy mood lifters",
-      "Supports cardiovascular circulatory health",
-      "Exquisite paired on cold afternoons with a splash of milk"
-    ],
-    specifications: [
-      { label: "Origin", value: "Sibsagar, Upper Assam (India) & Calabria (Italy)" },
-      { label: "Ingredients", value: "Assam Orthodox Black Tea, Pure Oil of Bergamot" },
+      { label: "Origin", value: "High-Altitude Assam Tea Estates, India" },
+      { label: "Grade", value: "Special Granules & Dust CTC Blend" },
+      { label: "Ingredients", value: "100% Pure Assam Tea Powder" },
       { label: "Caffeine Level", value: "High" },
-      { label: "Steep Time", value: "3 - 5 minutes at 95°C" }
+      { label: "Steep Time", value: "3 - 5 minutes at 100°C" }
+    ]
+  },
+  
+  {
+    id: "instant-coffee-pure-arabica",
+    name: "100% Pure Arabica Instant Coffee",
+    category: "instant-coffee",
+    price: 299,
+    description: "100% Pure Arabica Instant Coffee Natural Flavor - 50 gms. Experience a smooth, full-bodied coffee filled with premium aroma.",
+    longDescription: "Sourced from the finest high-altitude bean estates, our 100% Pure Arabica Instant Coffee is premium custom-curated for coffee enthusiasts who demand instant perfection. The beans are slow-roasted and dried in tiny batches to capture natural chocolatey, malty notes and a perfectly smooth, velvety crema profile. Crafted with zero chicory, zero sugar, and no artificial materials.",
+    images: [
+      "/images/Instant_Coffee_collections.png"
+    ],
+    rating: 4.9,
+    reviewsCount: 124,
+    isNew: true,
+    benefits: [
+      "Crafted from premium 100% Arabica beans for a smoother, richer profile without bitterness",
+      "Absolutely 0% chicory, zero sugar, and zero artificial preservatives",
+      "Gently dried to preserve organic micro-crema and pristine aromatics",
+      "Saves time and dissolves smoothly in both hot milk or water instantly"
+    ],
+    specifications: [
+      { label: "Origin", value: "High-Altitude Estates, India" },
+      { label: "Ingredients", value: "100% Premium Arabica Coffee" },
+      { label: "Weight", value: "50g Glass Jar" },
+      { label: "Caffeine Level", value: "High" }
     ]
   }
 ];
