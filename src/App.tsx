@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AnnouncementBar from "./components/AnnouncementBar";
 import Navbar from "./components/Navbar";
 import HomeSection from "./components/HomeSection";
@@ -11,8 +11,40 @@ import Footer from "./components/Footer";
 import { Product } from "./types";
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<"home" | "about" | "shop" | "contact">("home");
+  // Helper to parse page from URL hash
+  const getPageFromHash = (): "home" | "about" | "shop" | "contact" => {
+    if (typeof window === "undefined") return "home";
+    const hash = window.location.hash.toLowerCase().replace("#", "");
+    if (hash === "about" || hash === "story") return "about";
+    if (hash === "shop") return "shop";
+    if (hash === "contact") return "contact";
+    return "home";
+  };
+
+  const [currentPage, setCurrentPageState] = useState<"home" | "about" | "shop" | "contact">(getPageFromHash);
   const [preselectedCategory, setPreselectedCategory] = useState<string | null>(null);
+
+  // Sync hash changes with page state (Browser Back/Forward buttons)
+  useEffect(() => {
+    const handleHashChange = () => {
+      setCurrentPageState(getPageFromHash());
+    };
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
+
+  // Custom router function that modifies the hash, enabling browser history & back/forward button support
+  const setCurrentPage = (page: "home" | "about" | "shop" | "contact") => {
+    const targetHash = page === "home" ? "" : `#${page}`;
+    // Scroll window smoothly
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (window.location.hash !== targetHash) {
+      window.location.hash = targetHash;
+    } else {
+      // If hash is already the target, enforce the page render
+      setCurrentPageState(page);
+    }
+  };
 
   // Modal active slots
   const [selectedDetailProduct, setSelectedDetailProduct] = useState<Product | null>(null);
