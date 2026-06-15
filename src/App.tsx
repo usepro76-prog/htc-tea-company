@@ -18,11 +18,11 @@ export default function App() {
   const [selectedDetailProduct, setSelectedDetailProduct] = useState<Product | null>(null);
   const [selectedOrderProduct, setSelectedOrderProduct] = useState<Product | null>(null);
 
-  const ADMIN_WHATSAPP_NUMBER = "919999999999";
+  const ADMIN_WHATSAPP_NUMBER = "917755933865";
 
   const handleGlobalContactWhatsapp = () => {
     const generalMsg = encodeURIComponent(
-      "🌱 *Hello Prana Tea Collective! I am visiting your online boutique and would love some direct recommendations on premium teas & Ayurvedic blends.*"
+      "🌱 *Hello The Hind Tea Company! I am visiting your online boutique and would love some direct recommendations on premium teas & custom blends.*"
     );
     window.open(`https://wa.me/${ADMIN_WHATSAPP_NUMBER}?text=${generalMsg}`, "_blank");
   };

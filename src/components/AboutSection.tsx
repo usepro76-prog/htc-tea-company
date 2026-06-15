@@ -50,7 +50,7 @@ export default function AboutSection({ onShopNow }: AboutSectionProps) {
         </div>
         <div className="relative aspect-[4/3] rounded-xl overflow-hidden border border-gold-300/30">
           <img
-            src="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&q=80&w=900"
+            src="/images/about_page_img_1.png"
             alt="High attitude tea hills of Assam & Darjeeling"
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
@@ -64,7 +64,7 @@ export default function AboutSection({ onShopNow }: AboutSectionProps) {
         <div className="max-w-7xl mx-auto py-16 md:py-24 px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1 relative aspect-[4/3] rounded-xl overflow-hidden border border-gold-300/30">
             <img
-              src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&q=80&w=900"
+              src="/images/about_page_img_2.png"
               alt="Natural organic spices cardamom, turmeric and herbs"
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"

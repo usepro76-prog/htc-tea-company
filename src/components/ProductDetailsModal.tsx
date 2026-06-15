@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { X, CheckCircle, Leaf, Star, ShieldCheck, ShoppingCart } from "lucide-react";
 import { Product } from "../types";
+import { CATEGORIES } from "../data/products";
 
 interface ProductDetailsModalProps {
   product: Product;
@@ -101,11 +102,7 @@ export default function ProductDetailsModal({
             <div>
               {/* Breadcrumb / Category */}
               <span className="text-[10px] font-bold uppercase tracking-widest text-[#B19351]">
-                {product.category === "classics"
-                  ? "Signature Single-Origin Classics"
-                  : product.category === "wellness"
-                  ? "Wellness & Ayurvedic Herbs"
-                  : "Rare Exotics & Matcha"}
+                {CATEGORIES.find((cat) => cat.id === product.category)?.name || "Premium Selection"}
               </span>
 
               <h2 className="text-2xl md:text-3xl font-serif font-black text-emerald-950 mt-1 leading-snug">

@@ -15,7 +15,7 @@ export const CATEGORIES: Category[] = [
   },
   {
     id: "masala-elaichi",
-    name: "Premium masala and elaichi Tea Bugs",
+    name: "Masala & Elaichi",
     description: "Robust Assam tea powder blended with export grade elaichi and aromatic spices.",
     image: "/images/Premium_masala_and_elaichi_tea_bags.png",
   },

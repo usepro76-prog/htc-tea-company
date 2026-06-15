@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { X, Send, ShoppingCart, ShieldCheck } from "lucide-react";
 import { Product, OrderFormData } from "../types";
+import { CATEGORIES } from "../data/products";
 
 interface OrderFormModalProps {
   product: Product;
@@ -24,7 +25,7 @@ export default function OrderFormModal({ product, isOpen, onClose }: OrderFormMo
   });
 
   const [errorMsg, setErrorMsg] = useState("");
-  const ADMIN_WHATSAPP_NUMBER = "919999999999"; // Replace with real admin number
+  const ADMIN_WHATSAPP_NUMBER = "917755933865"; // Replace with real admin number
 
   if (!isOpen) return null;
 
@@ -63,37 +64,33 @@ export default function OrderFormModal({ product, isOpen, onClose }: OrderFormMo
     }
 
     // Formulate magical custom WhatsApp message
-    const categoryName =
-      product.category === "classics"
-        ? "Signature Classics"
-        : product.category === "wellness"
-        ? "Wellness & Herbal"
-        : "Exotics & Matchas";
+    const categoryName = CATEGORIES.find((cat) => cat.id === product.category)?.name || "Premium Selection";
 
-    const separator = "━━━━━━━━━━━━━━━━━━━━━━";
     const orderMsg = 
-`🌱 *NEW ORDER - PRANA TEA COLLECTIVE* 🌱
-${separator}
+`📦 *NEW ORDER - THE HIND TEA COMPANY* 📦
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-🛒 *PRODUCT OVERVIEW*
-• *Tea/Elixir:* ${product.name}
-• *Chamber:* ${categoryName}
-• *Pre-tax Price:* ₹${product.price} INR
-• *Availability:* Hand-sealed Garden Fresh
+🛒 *PRODUCT DETAILS*
+• *Product:* ${product.name}
+• *Collection:* ${categoryName}
+• *Price:* ₹${product.price} INR
+• *Delivery:* Free Courier Delivery 
 
-📌 *SHIPPING DETAILS*
-• *Recipient:* ${formData.title} ${formData.fullName}
-• *Mobile Number:* ${formData.mobileNumber}
-• *Email Address:* ${formData.emailAddress}
-• *Address:* ${formData.flatHouseNo}, ${formData.address}
-• *Landmark:* ${formData.landmark || "N/A"}
-• *Pincode:* ${formData.pincode}
-• *City / Town:* ${formData.city}
+📍 *SHIPPING & CONTACT*
+• *Customer:* ${formData.title} ${formData.fullName}
+• *WhatsApp:* ${formData.mobileNumber}
+• *Email:* ${formData.emailAddress}
+
+📬 *DELIVERY ADDRESS*
+• *Flat/House:* ${formData.flatHouseNo}
+• *Street/Colony:* ${formData.address}
+${formData.landmark ? `• *Landmark:* ${formData.landmark}\n` : ""}• *City / Town:* ${formData.city}
 • *State:* ${formData.state}
-• *Region:* India 🇮🇳
+• *Pincode:* ${formData.pincode}
+• *Country:* India 🇮🇳
 
-${separator}
-🍃 _Order initiated via online luxury boutique. Golden blends dispatching soon!_`;
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🍃 _Thank you for ordering. We will contact you shortly to confirm your dispatch & payment details!_`;
 
     const encodedText = encodeURIComponent(orderMsg);
     const whatsappUrl = `https://wa.me/${ADMIN_WHATSAPP_NUMBER}?text=${encodedText}`;

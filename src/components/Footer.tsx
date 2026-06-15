@@ -143,7 +143,7 @@ export default function Footer({ setCurrentPage, openContactWhatsapp }: FooterPr
             </li>
             <li className="flex items-center gap-2.5">
               <Phone size={14} className="text-gold-500 flex-shrink-0" />
-              <span>+91 99999 99999</span>
+              <span>+91 77559 33865</span>
             </li>
             <li className="flex items-center gap-2.5">
               <Mail size={14} className="text-gold-500 flex-shrink-0" />

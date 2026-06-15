@@ -53,72 +53,104 @@ export default function ShopSection({
   });
 
   return (
-    <section id="shop-boutique-page" className="animate-fade-in py-8 px-6 md:px-12 max-w-7xl mx-auto space-y-10">
+    <section id="shop-boutique-page" className="animate-fade-in space-y-10">
       
-      {/* Editorial Page Header */}
-      <div className="text-center space-y-3 py-6 max-w-2xl mx-auto">
-        <span className="text-[10px] uppercase font-bold tracking-[0.2em] text-gold-500"> Pure Garden Sourced Blends </span>
-        <h1 className="text-3xl md:text-4xl font-serif font-black text-emerald-950">
-          The Hind Tea Signature Boutique
-        </h1>
-        <p className="text-xs text-gray-500 leading-relaxed font-light">
-          Browse our premium wholesale and retail collections of high-altitude Assam CTC blends, restorative herbal wellness teas, and 100% Pure Arabica flavored instant coffees. Sourced with absolute integrity for tea connoisseurs.
-        </p>
+      {/* Premium Hero Banner Section with Responsive Desktop/Mobile Background Images */}
+      <div 
+        className="relative w-full bg-[#051A13] overflow-hidden cursor-pointer flex items-center justify-center p-6 md:p-12 min-h-[300px] md:min-h-[420px]"
+        title="Browse Premium Tea Collection"
+      >
+        {/* Background Images with <picture> for Native Responsive Loading */}
+        <picture className="absolute inset-0 w-full h-full select-none">
+          <source media="(min-width: 768px)" srcSet="/images/shop_heroimg_desktop.png" />
+          <img 
+            src="/images/shop_heroimg_mobile.png" 
+            alt="The Hind Tea Signature Boutique Hero" 
+            className="w-full h-full object-cover"
+            referrerPolicy="no-referrer"
+          />
+        </picture>
+        
+        {/* Premium Semi-transparent Overlay to guarantee high text readability */}
+        <div className="absolute inset-0 bg-emerald-950/75 md:bg-emerald-950/65 z-10" />
+
+        {/* Hero Section Content Overlay */}
+        <div className="relative z-20 text-center space-y-3.5 md:space-y-4 max-w-2xl mx-auto py-6">
+          <span className="text-[10px] uppercase font-bold tracking-[0.25em] text-gold-300 bg-emerald-950/60 backdrop-blur-xs px-3.5 py-1 rounded-full border border-gold-300/15 inline-block">
+            Pure Garden Sourced Blends
+          </span>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-black text-white leading-tight drop-shadow-xs">
+            The Hind Tea <span className="text-[#E0C080]">Signature Boutique</span>
+          </h1>
+          <p className="text-xs md:text-sm text-gold-100/90 leading-relaxed font-light max-w-xl mx-auto">
+            Browse our premium wholesale and retail collections of high-altitude Assam CTC blends, restorative herbal wellness teas, and 100% Pure Arabica flavored instant coffees. Sourced with absolute integrity for tea connoisseurs.
+          </p>
+        </div>
+
+        {/* Subtle bottom brand line */}
+        <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-gold-500/0 via-gold-500/50 to-gold-500/0 z-20" />
       </div>
 
-      {/* Filter and Control Bar */}
-      <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 border-b border-gold-200/20 pb-6">
-        
-        {/* Left Side: Traditional category buttons */}
-        <div className="flex flex-wrap items-center gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none">
-          <button
-            onClick={() => handleFilterClick("all")}
-            className={`text-xs uppercase font-semibold tracking-widest px-4 py-2.5 rounded transition-all duration-300 pointer-events-auto cursor-pointer ${
-              selectedFilter === "all"
-                ? "bg-emerald-900 text-gold-50 shadow-md"
-                : "bg-gold-50 text-emerald-950 border border-gold-200/20 hover:bg-gold-100"
-            }`}
-          >
-            All Harvests
-          </button>
+      {/* Main Browse and Grid Section with standard container page margins */}
+      <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-10 pb-12">
+        {/* Filter and Control Bar */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-gold-200/20 pb-8">
           
-          {CATEGORIES.map((cat) => {
-            const isSelected = selectedFilter === cat.id;
-            return (
+          {/* Left Side: Premium category buttons */}
+          <div className="w-full md:w-auto space-y-2.5">
+            <span className="text-[10px] md:text-[11px] uppercase font-bold tracking-[0.2em] text-[#B19351] block text-left">
+              Filter by Collection
+            </span>
+            <div className="flex flex-wrap items-center gap-2">
               <button
-                key={cat.id}
-                onClick={() => handleFilterClick(cat.id)}
-                className={`text-xs uppercase font-semibold tracking-widest px-4 py-2.5 rounded transition-all duration-300 pointer-events-auto cursor-pointer ${
-                  isSelected
-                    ? "bg-emerald-900 text-gold-50 shadow-md"
-                    : "bg-gold-50 text-emerald-950 border border-gold-200/20 hover:bg-gold-100"
+                onClick={() => handleFilterClick("all")}
+                className={`text-[10px] md:text-[11px] uppercase font-bold tracking-widest px-4 md:px-5 py-2 md:py-2.5 rounded-full transition-all duration-300 pointer-events-auto cursor-pointer border text-center whitespace-nowrap ${
+                  selectedFilter === "all"
+                    ? "bg-emerald-900 text-white border-gold-400 shadow-sm"
+                    : "bg-white text-emerald-950 border-emerald-900/10 hover:bg-gold-50 hover:border-gold-400 hover:text-emerald-900"
                 }`}
               >
-                {cat.name}
+                All Harvests
               </button>
-            );
-          })}
-        </div>
-
-        {/* Right Side: Sorting controls */}
-        <div className="flex items-center justify-between sm:justify-end gap-4">
-          <div className="flex items-center gap-2 text-xs text-gray-400 font-semibold uppercase">
-            <ArrowUpDown size={14} className="text-gold-500" />
-            <span>Sort By:</span>
+              
+              {CATEGORIES.map((cat) => {
+                const isSelected = selectedFilter === cat.id;
+                return (
+                  <button
+                    key={cat.id}
+                    onClick={() => handleFilterClick(cat.id)}
+                    className={`text-[10px] md:text-[11px] uppercase font-bold tracking-widest px-3.5 md:px-5 py-2 md:py-2.5 rounded-full transition-all duration-300 pointer-events-auto cursor-pointer border text-center whitespace-nowrap ${
+                      isSelected
+                        ? "bg-emerald-900 text-white border-gold-400 shadow-sm"
+                        : "bg-white text-emerald-950 border-emerald-900/10 hover:bg-gold-50 hover:border-gold-400 hover:text-emerald-900"
+                    }`}
+                  >
+                    {cat.name}
+                  </button>
+                );
+              })}
+            </div>
           </div>
-          <select
-            value={sortOption}
-            onChange={(e) => setSortOption(e.target.value)}
-            className="text-xs border border-gray-300 rounded px-3 py-2 bg-[#FAF8F5] text-emerald-950 font-medium focus:outline-none focus:border-emerald-800"
-          >
-            <option value="featured">Best Sellers / Premium First</option>
-            <option value="price-low-high">Price: Low to High</option>
-            <option value="price-high-low">Price: High to Low</option>
-            <option value="rating">Connoisseur Rating</option>
-          </select>
-        </div>
 
-      </div>
+          {/* Right Side: Sorting controls */}
+          <div className="flex flex-row items-center justify-between md:justify-end gap-3.5 w-full md:w-auto self-start md:self-end pt-3 md:pt-0 border-t border-gold-200/5 md:border-t-0">
+            <div className="flex items-center gap-2 text-[10px] md:text-xs text-gray-400 font-bold uppercase tracking-wider whitespace-nowrap">
+              <ArrowUpDown size={13} className="text-gold-500" />
+              <span>Sort By:</span>
+            </div>
+            <select
+              value={sortOption}
+              onChange={(e) => setSortOption(e.target.value)}
+              className="text-[11px] md:text-xs border border-emerald-900/15 rounded-full px-5 py-2.5 bg-white text-emerald-950 font-bold tracking-wide focus:outline-none focus:border-gold-500 shadow-xs cursor-pointer"
+            >
+              <option value="featured">Best Sellers & Premium First</option>
+              <option value="price-low-high">Price: Low to High</option>
+              <option value="price-high-low">Price: High to Low</option>
+              <option value="rating">Connoisseur Rating</option>
+            </select>
+          </div>
+
+        </div>
 
       {/* Product Results Count Warning */}
       <div className="text-xs text-gray-400 font-medium flex items-center justify-between">
@@ -165,15 +197,7 @@ export default function ShopSection({
               
               <div>
                 <span className="text-[9px] font-bold uppercase tracking-widest text-[#B19351]">
-                  {product.category === "Assam-Blend"
-                    ? "Assam Blend"
-                    : product.category === "Greem-Herbal-Tea"
-                    ? "Green & Herbal"
-                    : product.category === "masala-elaichi"
-                    ? "Masala & Elaichi"
-                    : product.category === "instant-coffee"
-                    ? "Instant Coffee"
-                    : "Premium Selection"}
+                  {CATEGORIES.find((c) => c.id === product.category)?.name || "Premium Selection"}
                 </span>
 
                 <h3
@@ -266,6 +290,7 @@ export default function ShopSection({
         </div>
       </div>
 
+      </div> {/* End of max-w-7xl grid content */}
     </section>
   );
 }

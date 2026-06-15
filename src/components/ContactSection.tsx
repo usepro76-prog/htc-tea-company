@@ -94,8 +94,8 @@ export default function ContactSection() {
               </div>
               <div className="text-xs">
                 <h4 className="font-bold text-emerald-950 uppercase tracking-wider">Deals & Wholesales Line</h4>
-                <p className="text-gray-600 mt-1">Mobile & WhatsApp Desk: +91 99999 99999</p>
-                <p className="text-gray-400 mt-0.5">Customer Support: +91 98888 88888</p>
+                <p className="text-gray-600 mt-1">Mobile & WhatsApp Desk: +91 77559 33865</p>
+                <p className="text-gray-400 mt-0.5">Customer Support: +91 77559 33865</p>
               </div>
             </div>
 
