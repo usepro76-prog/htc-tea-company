@@ -1,7 +1,7 @@
 import React from "react";
 import { Star, ArrowRight, ShieldCheck, Leaf, Sparkles, MessageCircleCode, Flame, HelpCircle } from "lucide-react";
-import { Product, Category, Testimonial } from "../types";
-import { PRODUCTS, CATEGORIES, TESTIMONIALS } from "../data/products";
+import { Product, Category, Testimonial, GoogleReview } from "../types";
+import { PRODUCTS, CATEGORIES, TESTIMONIALS, GOOGLE_REVIEWS } from "../data/products";
 // @ts-ignore
 import mobileHero from "../assets/images/tea_bugs_mobile_hero_1.png";
 // @ts-ignore
@@ -124,22 +124,11 @@ export default function HomeSection({
       <div className="max-w-7xl mx-auto py-16 md:py-24 px-6 md:px-12 space-y-12 bg-white">
         
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-gold-200/20 pb-6">
-          <div className="space-y-1 text-center sm:text-left">
+          <div className="space-y-1 text-center sm:text-left w-full">
             <span className="text-[10px] font-bold text-gold-500 uppercase tracking-widest">Our Flagship Lots</span>
             <h2 className="text-2xl md:text-3xl font-serif font-black text-emerald-950">Connoisseur Best-Sellers</h2>
             <p className="text-xs text-gray-400 font-light">Direct garden sourced luxury. Fresh vacuum dispatch.</p>
           </div>
-          <button
-            onClick={() => {
-              setPreselectedCategory(null);
-              setCurrentPage("shop");
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }}
-            className="flex items-center gap-2 text-xs uppercase font-bold tracking-widest text-emerald-900 hover:text-[#B19351] transition-colors cursor-pointer"
-          >
-            <span>View Full Boutique Collection</span>
-            <ArrowRight size={13} />
-          </button>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -164,7 +153,15 @@ export default function HomeSection({
               <div className="p-5 flex-1 flex flex-col justify-between">
                 <div>
                   <span className="text-[9px] font-bold uppercase tracking-widest text-[#B19351]">
-                    {product.category === "classics" ? "Single-Origin Classic" : product.category === "wellness" ? "Wellness Blend" : "Ceremonial Matchas"}
+                    {product.category === "Assam-Blend" 
+                      ? "Assam Blend" 
+                      : product.category === "Greem-Herbal-Tea" 
+                      ? "Green & Herbal" 
+                      : product.category === "masala-elaichi" 
+                      ? "Masala & Elaichi" 
+                      : product.category === "instant-coffee" 
+                      ? "Instant Coffee" 
+                      : "Premium Selection"}
                   </span>
                   
                   <h3
@@ -207,6 +204,21 @@ export default function HomeSection({
           ))}
         </div>
 
+        {/* View All Button at the bottom of the section */}
+        <div className="flex justify-center pt-6">
+          <button
+            onClick={() => {
+              setPreselectedCategory(null);
+              setCurrentPage("shop");
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            className="group/btn bg-[#051A13] hover:bg-emerald-900 text-gold-100 flex items-center gap-2.5 text-xs uppercase font-extrabold tracking-widest px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-102 cursor-pointer shadow-md hover:shadow-gold-500/10"
+          >
+            <span>View All</span>
+            <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
+          </button>
+        </div>
+
       </div>
 
       {/* SECTION 4: Why Choose Us (Premium standards) */}
@@ -214,10 +226,10 @@ export default function HomeSection({
         <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-12">
           
           <div className="text-center space-y-3 max-w-xl mx-auto">
-            <span className="text-[10px] font-bold text-gold-500 uppercase tracking-widest">Uncompromising Standards</span>
-            <h2 className="text-3xl font-serif font-black text-emerald-950">Why Connoisseurs Choose Us</h2>
+            <span className="text-[10px] font-bold text-gold-500 uppercase tracking-widest">A legacy of trust in pune</span>
+            <h2 className="text-3xl font-serif font-black text-emerald-950">Why Connoisseurs Choose Hind Tea</h2>
             <p className="text-xs text-gray-500 font-light">
-              We reject global wholesale supply patterns. Discover a brand built on transparency and absolute botanical integrity.
+              Rooted in the historical core of Raviwar Peth, Pune, we represent pure tea craftsmanship. Discover how we elevate every single cup.
             </p>
           </div>
 
@@ -227,9 +239,9 @@ export default function HomeSection({
               <div className="w-12 h-12 bg-emerald-900 text-gold-200 rounded-full flex items-center justify-center mx-auto shadow-sm">
                 <ShieldCheck size={20} />
               </div>
-              <h3 className="font-serif font-bold text-emerald-950 text-sm">Direct Garden Trade</h3>
+              <h3 className="font-serif font-bold text-emerald-950 text-sm">Legacy of Trust</h3>
               <p className="text-xs text-gray-500 leading-relaxed font-light">
-                We remove middle brokers completely, giving back up to 25% larger margins to picking farmers at source estates.
+                Known across Maharashtra for our high-integrity, customer-centric services. Building relationships since generations under stellar trust.
               </p>
             </div>
 
@@ -237,9 +249,9 @@ export default function HomeSection({
               <div className="w-12 h-12 bg-emerald-900 text-gold-200 rounded-full flex items-center justify-center mx-auto shadow-sm">
                 <Leaf size={20} />
               </div>
-              <h3 className="font-serif font-bold text-emerald-950 text-sm">100% Organic Purity</h3>
+              <h3 className="font-serif font-bold text-emerald-950 text-sm">Direct Garden Blends</h3>
               <p className="text-xs text-gray-500 leading-relaxed font-light">
-                No spray pesticides, artificial color concentrates, or chemical flavorings. Organically clean rainfall-grown harvests.
+                Meticulously sourced from Assam & Darjeeling's high-altitude estates. Whole whole-leaf lots processed within days.
               </p>
             </div>
 
@@ -247,9 +259,9 @@ export default function HomeSection({
               <div className="w-12 h-12 bg-emerald-900 text-gold-200 rounded-full flex items-center justify-center mx-auto shadow-sm">
                 <Sparkles size={20} />
               </div>
-              <h3 className="font-serif font-bold text-emerald-950 text-sm">Vacuum Canopy Sealed</h3>
+              <h3 className="font-serif font-bold text-emerald-950 text-sm">Perfect Thickness</h3>
               <p className="text-xs text-gray-500 leading-relaxed font-light">
-                Nitrogen-purged at harvest site within hours to lock down delicate floral oils and curative properties perfectly.
+                Expertly balanced proportions of CTC granules and dust particles to brew tea with robust liquor, classic golden color, and rich mouthfeel.
               </p>
             </div>
 
@@ -257,9 +269,9 @@ export default function HomeSection({
               <div className="w-12 h-12 bg-emerald-900 text-gold-200 rounded-full flex items-center justify-center mx-auto shadow-sm">
                 <Flame size={20} />
               </div>
-              <h3 className="font-serif font-bold text-emerald-950 text-sm">Micro-batch Roasting</h3>
+              <h3 className="font-serif font-bold text-emerald-950 text-sm">100% Pure & Hygienic</h3>
               <p className="text-xs text-gray-500 leading-relaxed font-light">
-                Fired and blended in limited 20kg batches by master sommeliers, ensuring pristine uniformity.
+                Free from synthetic fillers, excessive stems, or fake coloring. Carefully stored and packed in food-grade, dust-proof conditions.
               </p>
             </div>
 
@@ -268,51 +280,203 @@ export default function HomeSection({
         </div>
       </div>
 
-      {/* SECTION 5: Customer Testimonials */}
-      <div className="bg-white py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-12">
+      {/* SECTION 5.5: Google Customer Reviews Sliding Marquee */}
+      <div className="bg-[#FAF8F5] py-16 border-t border-b border-gold-200/20 overflow-hidden">
+        <div className="space-y-10">
           
-          <div className="text-center space-y-3 max-w-xl mx-auto">
-            <span className="text-[10px] font-bold text-gold-500 uppercase tracking-widest">Client Testimonials</span>
-            <h2 className="text-3xl font-serif font-black text-emerald-950">Pure Elixir Accolades</h2>
+          <div className="text-center space-y-3 max-w-xl mx-auto px-6">
+            <span className="text-[10px] font-bold text-[#B19351] uppercase tracking-[0.25em] flex items-center justify-center gap-2">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#B19351] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#B19351]"></span>
+              </span>
+              Verified Google Maps Feed
+            </span>
+            <div className="flex items-center justify-center gap-2">
+              <span className="text-3xl font-serif font-black text-emerald-950">4.8</span>
+              <div className="flex text-amber-500 gap-0.5">
+                {[1, 2, 3, 4, 5].map((s) => (
+                  <Star key={s} size={15} fill="currentColor" />
+                ))}
+              </div>
+              <span className="text-xs text-gray-400 font-light">(250+ Real Reviews)</span>
+            </div>
+            <h2 className="text-2xl md:text-3xl font-serif font-black text-emerald-950">Loved Across Pune & Maharashtra</h2>
             <p className="text-xs text-gray-500 font-light">
-              See what verified sommeliers, wellness practitioners, and everyday tea lovers write about Prana.
+              Real reviews sourced directly from the Hind Tea Company Google Maps listing. Simply hover over any review card to pause sliding and read it.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {TESTIMONIALS.map((t) => (
-              <div
-                key={t.id}
-                className="bg-[#FAF8F5] border border-gold-200/20 rounded-xl p-6 relative flex flex-col justify-between shadow-sm"
+          <div className="space-y-6 w-full max-w-full overflow-hidden">
+            
+            {/* Row 1: Reviews gr1 to gr5 */}
+            <div className="relative overflow-hidden w-full flex select-none">
+              <div 
+                className="animate-marquee-container flex gap-6" 
+                style={{ 
+                  animationDuration: '45s'
+                }}
               >
-                <div>
-                  {/* Visual quote indicator */}
-                  <span className="font-serif text-5xl text-gold-300/30 absolute top-2 left-4 select-none">“</span>
-                  
-                  {/* Verified rating stars */}
-                  <div className="flex text-amber-500 gap-1 relative z-10 mb-4">
-                    {Array.from({ length: t.rating }).map((_, i) => (
-                      <Star key={i} size={12} fill="currentColor" />
-                    ))}
+                {GOOGLE_REVIEWS.slice(0, 5).map((review, idx) => (
+                  <div key={`row1-${review.id}-${idx}`} className="w-[320px] flex-shrink-0 bg-white border border-gold-200/10 rounded-xl p-5 shadow-xs hover:border-gold-500/45 transition-colors relative flex flex-col justify-between">
+                    <div>
+                      {/* Star rating & google badge */}
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="flex text-amber-500 gap-0.5">
+                          {Array.from({ length: review.rating }).map((_, i) => (
+                            <Star key={i} size={11} fill="currentColor" />
+                          ))}
+                        </div>
+                        <span className="text-[10px] font-black text-blue-600 bg-blue-50/80 px-2 py-0.5 rounded-full flex items-center justify-center select-none shadow-3xs font-mono">G</span>
+                      </div>
+                      <p className="text-xs text-gray-600 font-light leading-relaxed mb-4">
+                        "{review.text}"
+                      </p>
+                    </div>
+                    {/* Review Author - No Relative Time display */}
+                    <div className="border-t border-gold-200/5 pt-3 flex items-center justify-between text-[11px] mt-auto">
+                      <div>
+                        <h4 className="font-bold text-emerald-950 flex items-center gap-1.5">
+                          {review.name}
+                          {review.isLocalGuide && (
+                            <span className="text-[7.5px] bg-amber-100 text-amber-800 px-1 rounded-xs font-black tracking-wider uppercase" title="Google Local Guide">LG</span>
+                          )}
+                        </h4>
+                        <span className="text-[9.5px] text-emerald-800 font-medium flex items-center gap-1">
+                          <span className="h-1.5 w-1.5 bg-emerald-700 rounded-full inline-block"></span>
+                          Verified Maps Profile
+                        </span>
+                      </div>
+                      <span className="text-[9px] text-gray-400 bg-gray-50 px-2 py-0.5 rounded border border-gray-100 font-mono">
+                        {review.location}
+                      </span>
+                    </div>
                   </div>
-
-                  <p className="text-xs text-gray-600 leading-relaxed font-light relative z-10 italic mb-6">
-                    "{t.text}"
-                  </p>
-                </div>
-
-                <div className="border-t border-gold-200/10 pt-4 flex items-center justify-between">
-                  <div>
-                    <h4 className="font-serif font-bold text-emerald-950 text-xs">{t.name}</h4>
-                    <p className="text-[10px] text-gray-400 mt-0.5">{t.role}</p>
+                ))}
+                {/* Duplicate Row 1 for Seamless loop */}
+                {GOOGLE_REVIEWS.slice(0, 5).map((review, idx) => (
+                  <div key={`row1-dup-${review.id}-${idx}`} className="w-[320px] flex-shrink-0 bg-white border border-gold-200/10 rounded-xl p-5 shadow-xs hover:border-gold-500/45 transition-colors relative flex flex-col justify-between">
+                    <div>
+                      {/* Star rating & google badge */}
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="flex text-amber-500 gap-0.5">
+                          {Array.from({ length: review.rating }).map((_, i) => (
+                            <Star key={i} size={11} fill="currentColor" />
+                          ))}
+                        </div>
+                        <span className="text-[10px] font-black text-blue-600 bg-blue-50/80 px-2 py-0.5 rounded-full flex items-center justify-center select-none shadow-3xs font-mono">G</span>
+                      </div>
+                      <p className="text-xs text-gray-600 font-light leading-relaxed mb-4">
+                        "{review.text}"
+                      </p>
+                    </div>
+                    {/* Review Author - No Relative Time display */}
+                    <div className="border-t border-gold-200/5 pt-3 flex items-center justify-between text-[11px] mt-auto">
+                      <div>
+                        <h4 className="font-bold text-emerald-950 flex items-center gap-1.5">
+                          {review.name}
+                          {review.isLocalGuide && (
+                            <span className="text-[7.5px] bg-amber-100 text-amber-800 px-1 rounded-xs font-black tracking-wider uppercase">LG</span>
+                          )}
+                        </h4>
+                        <span className="text-[9.5px] text-emerald-800 font-medium flex items-center gap-1">
+                          <span className="h-1.5 w-1.5 bg-emerald-700 rounded-full inline-block"></span>
+                          Verified Maps Profile
+                        </span>
+                      </div>
+                      <span className="text-[9px] text-gray-400 bg-gray-50 px-2 py-0.5 rounded border border-gray-100 font-mono">
+                        {review.location}
+                      </span>
+                    </div>
                   </div>
-                  <span className="text-[9px] uppercase font-bold text-[#B19351] bg-gold-100/50 px-2.5 py-0.5 rounded">
-                    {t.location}
-                  </span>
-                </div>
+                ))}
               </div>
-            ))}
+            </div>
+
+            {/* Row 2: Reviews gr6 to gr10 */}
+            <div className="relative overflow-hidden w-full flex select-none">
+              <div 
+                className="animate-marquee-container flex gap-6" 
+                style={{ 
+                  animationDuration: '50s'
+                }}
+              >
+                {GOOGLE_REVIEWS.slice(5, 10).map((review, idx) => (
+                  <div key={`row2-${review.id}-${idx}`} className="w-[320px] flex-shrink-0 bg-white border border-gold-200/10 rounded-xl p-5 shadow-xs hover:border-gold-500/45 transition-colors relative flex flex-col justify-between">
+                    <div>
+                      {/* Star rating & google badge */}
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="flex text-amber-500 gap-0.5">
+                          {Array.from({ length: review.rating }).map((_, i) => (
+                            <Star key={i} size={11} fill="currentColor" />
+                          ))}
+                        </div>
+                        <span className="text-[10px] font-black text-blue-600 bg-blue-50/80 px-2 py-0.5 rounded-full flex items-center justify-center select-none shadow-3xs font-mono">G</span>
+                      </div>
+                      <p className="text-xs text-gray-600 font-light leading-relaxed mb-4">
+                        "{review.text}"
+                      </p>
+                    </div>
+                    {/* Review Author - No Relative Time display */}
+                    <div className="border-t border-gold-200/5 pt-3 flex items-center justify-between text-[11px] mt-auto">
+                      <div>
+                        <h4 className="font-bold text-emerald-950 flex items-center gap-1.5">
+                          {review.name}
+                          {review.isLocalGuide && (
+                            <span className="text-[7.5px] bg-amber-100 text-amber-800 px-1 rounded-xs font-black tracking-wider uppercase" title="Google Local Guide">LG</span>
+                          )}
+                        </h4>
+                        <span className="text-[9.5px] text-emerald-800 font-medium flex items-center gap-1">
+                          <span className="h-1.5 w-1.5 bg-emerald-700 rounded-full inline-block"></span>
+                          Verified Maps Profile
+                        </span>
+                      </div>
+                      <span className="text-[9px] text-gray-400 bg-gray-50 px-2 py-0.5 rounded border border-gray-100 font-mono">
+                        {review.location}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+                {/* Duplicate Row 2 for Seamless loop */}
+                {GOOGLE_REVIEWS.slice(5, 10).map((review, idx) => (
+                  <div key={`row2-dup-${review.id}-${idx}`} className="w-[320px] flex-shrink-0 bg-white border border-gold-200/10 rounded-xl p-5 shadow-xs hover:border-gold-500/45 transition-colors relative flex flex-col justify-between">
+                    <div>
+                      {/* Star rating & google badge */}
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="flex text-amber-500 gap-0.5">
+                          {Array.from({ length: review.rating }).map((_, i) => (
+                            <Star key={i} size={11} fill="currentColor" />
+                          ))}
+                        </div>
+                        <span className="text-[10px] font-black text-blue-600 bg-blue-50/80 px-2 py-0.5 rounded-full flex items-center justify-center select-none shadow-3xs font-mono">G</span>
+                      </div>
+                      <p className="text-xs text-gray-600 font-light leading-relaxed mb-4">
+                        "{review.text}"
+                      </p>
+                    </div>
+                    {/* Review Author - No Relative Time display */}
+                    <div className="border-t border-gold-200/5 pt-3 flex items-center justify-between text-[11px] mt-auto">
+                      <div>
+                        <h4 className="font-bold text-emerald-950 flex items-center gap-1.5">
+                          {review.name}
+                          {review.isLocalGuide && (
+                            <span className="text-[7.5px] bg-amber-100 text-amber-800 px-1 rounded-xs font-black tracking-wider uppercase">LG</span>
+                          )}
+                        </h4>
+                        <span className="text-[9.5px] text-emerald-800 font-medium flex items-center gap-1">
+                          <span className="h-1.5 w-1.5 bg-emerald-700 rounded-full inline-block"></span>
+                          Verified Maps Profile
+                        </span>
+                      </div>
+                      <span className="text-[9px] text-gray-400 bg-gray-50 px-2 py-0.5 rounded border border-gray-150 font-mono">
+                        {review.location}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
           </div>
 
         </div>

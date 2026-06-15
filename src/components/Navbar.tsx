@@ -12,7 +12,7 @@ export default function Navbar({ currentPage, setCurrentPage, openContactWhatsap
 
   const navItems = [
     { id: "home", label: "Home" },
-    { id: "shop", label: "Shop Boutique" },
+    { id: "shop", label: "Shop" },
     { id: "about", label: "Our Story" },
     { id: "contact", label: "Contact Us" },
   ] as const;

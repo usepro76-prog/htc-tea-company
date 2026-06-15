@@ -48,3 +48,14 @@ export interface OrderFormData {
   state: string;
   country: string; // India (read-only)
 }
+
+export interface GoogleReview {
+  id: string;
+  name: string;
+  text: string;
+  rating: number;
+  location: string;
+  date?: string;
+  isLocalGuide?: boolean;
+}
+

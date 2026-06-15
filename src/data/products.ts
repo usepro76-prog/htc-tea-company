@@ -1,4 +1,4 @@
-import { Product, Category, Testimonial } from "../types";
+import { Product, Category, Testimonial, GoogleReview } from "../types";
 
 export const CATEGORIES: Category[] = [
   {
@@ -42,6 +42,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.8,
     reviewsCount: 165,
     isNew: true,
+    isBestSeller: true,
     benefits: [
       "Optimal blend of granules & dust from high-altitude estates for an extra strong, crisp flavor",
       "Delivers the iconic deep golden amber color and robust, full-bodied liquor",
@@ -123,6 +124,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.9,
     reviewsCount: 142,
     isNew: true,
+    isBestSeller: true,
     benefits: [
       "Ultimate high-altitude premium grade offering an extra robust, full-bodied cup of Kadak Chai",
       "Brews an incredibly rich, extra strong liquor with a beautiful sparkling golden finish",
@@ -177,6 +179,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.9,
     reviewsCount: 124,
     isNew: true,
+    isBestSeller: true,
     benefits: [
       "Combines peak high-altitude Assam CTC granules & dust with export-grade whole cardamom",
       "Delivers the signature strong ginger-malty liquor with intense aromatic elaichi coolness",
@@ -204,6 +207,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.8,
     reviewsCount: 110,
     isNew: true,
+    isBestSeller: true,
     benefits: [
       "Combines high-altitude Assam CTC granules & dust with a balanced master-mix of classic spices",
       "Delivers a perfect strong liquor with the ultimate aromatic warmth of high-grade cardamom, ginger, and cinnamon",
@@ -299,33 +303,6 @@ export const PRODUCTS: Product[] = [
       { label: "Steep Time", value: "3 - 5 minutes at 90°C" }
     ]
   },
-  
-  {
-    id: "instant-coffee-pure-arabica",
-    name: "100% Pure Arabica Instant Coffee",
-    category: "instant-coffee",
-    price: 299,
-    description: "100% Pure Arabica Instant Coffee Natural Flavor - 50 gms. Experience a smooth, full-bodied coffee filled with premium aroma.",
-    longDescription: "Sourced from the finest high-altitude bean estates, our 100% Pure Arabica Instant Coffee is premium custom-curated for coffee enthusiasts who demand instant perfection. The beans are slow-roasted and dried in tiny batches to capture natural chocolatey, malty notes and a perfectly smooth, velvety crema profile. Crafted with zero chicory, zero sugar, and no artificial materials.",
-    images: [
-      "/images/Instant_Coffee_collections.png"
-    ],
-    rating: 4.9,
-    reviewsCount: 124,
-    isNew: true,
-    benefits: [
-      "Crafted from premium 100% Arabica beans for a smoother, richer profile without bitterness",
-      "Absolutely 0% chicory, zero sugar, and zero artificial preservatives",
-      "Gently dried to preserve organic micro-crema and pristine aromatics",
-      "Saves time and dissolves smoothly in both hot milk or water instantly"
-    ],
-    specifications: [
-      { label: "Origin", value: "High-Altitude Estates, India" },
-      { label: "Ingredients", value: "100% Premium Arabica Coffee" },
-      { label: "Weight", value: "50g Glass Jar" },
-      { label: "Caffeine Level", value: "High" }
-    ]
-  },
   {
     id: "tea-bugs-coffee-natural-flavor",
     name: "Tea Bugs Instant Coffee Natural Flavor",
@@ -408,3 +385,87 @@ export const TESTIMONIALS: Testimonial[] = [
     location: "Mumbai"
   }
 ];
+
+export const GOOGLE_REVIEWS: GoogleReview[] = [
+  {
+    id: "gr1",
+    name: "Ramesh Joshi",
+    text: "Authentic and original quality tea powder has been served by them for years in Raviwar Peth. Highly recommended.",
+    rating: 5,
+    location: "Pune, MH",
+    isLocalGuide: true
+  },
+  {
+    id: "gr2",
+    name: "Priya Kulkarni",
+    text: "Best choice for wholesale and retail tea buyers in Pune. Very polite owners and perfect pricing.",
+    rating: 5,
+    location: "Pune, MH",
+    isLocalGuide: false
+  },
+  {
+    id: "gr3",
+    name: "Amit Deshpande",
+    text: "Their special tea dust blend provides high strength and a strong natural aroma. Perfect Maharashtrian style kadak chai!",
+    rating: 5,
+    location: "Pune, MH",
+    isLocalGuide: true
+  },
+  {
+    id: "gr4",
+    name: "Sunita Ranade",
+    text: "Extremely hygienic, authentic leaves with zero artificial color. The color of the tea is purely golden and beautiful.",
+    rating: 5,
+    location: "Maharashtra",
+    isLocalGuide: true
+  },
+  {
+    id: "gr5",
+    name: "Vinayak Shinde",
+    text: "If you are starting a tea franchise or local cafe, purchase in bulk from Hind Tea Company for the most premium taste.",
+    rating: 5,
+    location: "Pune, MH",
+    isLocalGuide: false
+  },
+  {
+    id: "gr6",
+    name: "Dr. Anshu Gupta",
+    text: "Best organic cardamom and masala tea blends in Pune, the flavor feels entirely natural and refreshing.",
+    rating: 5,
+    location: "Mumbai, MH",
+    isLocalGuide: true
+  },
+  {
+    id: "gr7",
+    name: "Nikhil More",
+    text: "Family-owned legacy depot with outstanding quality and reasonable prices. Our favorite place since childhood.",
+    rating: 5,
+    location: "Pune, MH",
+    isLocalGuide: false
+  },
+  {
+    id: "gr8",
+    name: "Sneha Patil",
+    text: "Very clean storage and quick service on WhatsApp. Sourced directly with direct pricing structures.",
+    rating: 5,
+    location: "Pune, MH",
+    isLocalGuide: true
+  },
+  {
+    id: "gr9",
+    name: "Suresh Kumar",
+    text: "A genuine wholesale tea leaves vendor in Pune. The aroma and strength of the Assam CTC granules are outstanding.",
+    rating: 5,
+    location: "Maharashtra",
+    isLocalGuide: true
+  },
+  {
+    id: "gr10",
+    name: "Vikram Aditi",
+    text: "Purest herbal infusions and strong CTC dust. Outstanding customer support and genuine billing, highly trusted.",
+    rating: 5,
+    location: "Pune, MH",
+    isLocalGuide: false
+  }
+];
+

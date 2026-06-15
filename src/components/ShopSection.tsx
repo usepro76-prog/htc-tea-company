@@ -57,12 +57,12 @@ export default function ShopSection({
       
       {/* Editorial Page Header */}
       <div className="text-center space-y-3 py-6 max-w-2xl mx-auto">
-        <span className="text-[10px] uppercase font-bold tracking-[0.2em] text-gold-500"> Pure Handpicked Micro-batches </span>
+        <span className="text-[10px] uppercase font-bold tracking-[0.2em] text-gold-500"> Pure Garden Sourced Blends </span>
         <h1 className="text-3xl md:text-4xl font-serif font-black text-emerald-950">
-          The Prana Loose-Leaf Vault
+          The Hind Tea Signature Boutique
         </h1>
         <p className="text-xs text-gray-500 leading-relaxed font-light">
-          Browse our exquisite array of premium single-origin whole leaf teas, traditional Ayurvedic immune elixirs, and rare shade-grown stoneground ceremonial matchas. Curated for the ultimate culinary and health connoisseur.
+          Browse our premium wholesale and retail collections of high-altitude Assam CTC blends, restorative herbal wellness teas, and 100% Pure Arabica flavored instant coffees. Sourced with absolute integrity for tea connoisseurs.
         </p>
       </div>
 
@@ -165,11 +165,15 @@ export default function ShopSection({
               
               <div>
                 <span className="text-[9px] font-bold uppercase tracking-widest text-[#B19351]">
-                  {product.category === "classics"
-                    ? "Single-Origin Classic"
-                    : product.category === "wellness"
-                    ? "Ayurvedic Botanical"
-                    : "Shade Shade Ceremony"}
+                  {product.category === "Assam-Blend"
+                    ? "Assam Blend"
+                    : product.category === "Greem-Herbal-Tea"
+                    ? "Green & Herbal"
+                    : product.category === "masala-elaichi"
+                    ? "Masala & Elaichi"
+                    : product.category === "instant-coffee"
+                    ? "Instant Coffee"
+                    : "Premium Selection"}
                 </span>
 
                 <h3
@@ -234,30 +238,30 @@ export default function ShopSection({
       {/* Sustainable Quality Checklist */}
       <div className="bg-emerald-900/5 border border-emerald-900/10 rounded-xl p-8 grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="flex gap-4">
-          <div className="p-3 bg-emerald-900 text-gold-200 rounded-lg h-11 w-11 flex-shrink-0 flex items-center justify-center">
-            ✔
+          <div className="p-3 bg-emerald-900 text-gold-200 rounded-lg h-11 w-11 flex-shrink-0 flex items-center justify-center text-sm font-bold">
+            ✓
           </div>
           <div>
-            <h4 className="font-serif font-bold text-emerald-950 text-sm">Vacuum Hermetic Sealing</h4>
-            <p className="text-xs text-gray-500 mt-1">Leaves are nitrogen flushed right on the plantation garden sites to safeguard cellular aromatics completely.</p>
+            <h4 className="font-serif font-bold text-emerald-950 text-sm">100% Pure & Hygienic</h4>
+            <p className="text-xs text-gray-500 mt-1">Checked meticulously for synthetic additives, non-food colorings, or fillers. We retain highest regulatory trust.</p>
           </div>
         </div>
         <div className="flex gap-4">
-          <div className="p-3 bg-emerald-900 text-gold-200 rounded-lg h-11 w-11 flex-shrink-0 flex items-center justify-center">
-            ✈
+          <div className="p-3 bg-emerald-900 text-gold-200 rounded-lg h-11 w-11 flex-shrink-0 flex items-center justify-center text-sm font-bold">
+            ✓
           </div>
           <div>
-            <h4 className="font-serif font-bold text-emerald-950 text-sm">Global Express Delivery</h4>
-            <p className="text-xs text-gray-500 mt-1">Hand-sealed pouches dispatch via leading climate-neutral cargo networks within 24 operational hours.</p>
+            <h4 className="font-serif font-bold text-emerald-950 text-sm">Calculated CTC Thickness</h4>
+            <p className="text-xs text-gray-500 mt-1">Balanced proportions of Assam granules & dust particles to brew strong kadak chai with gorgeous golden amber color.</p>
           </div>
         </div>
         <div className="flex gap-4">
-          <div className="p-3 bg-emerald-900 text-gold-200 rounded-lg h-11 w-11 flex-shrink-0 flex items-center justify-center">
-            ⚖
+          <div className="p-3 bg-emerald-900 text-gold-200 rounded-lg h-11 w-11 flex-shrink-0 flex items-center justify-center text-sm font-bold">
+            ✓
           </div>
           <div>
-            <h4 className="font-serif font-bold text-emerald-950 text-sm">Ethical Sourced Guarantee</h4>
-            <p className="text-xs text-gray-500 mt-1">We enforce premium agricultural wages and pay fair social healthcare premium payouts directly to grassroot picker guilds.</p>
+            <h4 className="font-serif font-bold text-emerald-950 text-sm">Pune Wholesale Depot</h4>
+            <p className="text-xs text-gray-500 mt-1">We operate directly out of Raviwar Peth, Pune, enabling optimized dealer prices and swift shipping across Maharashtra.</p>
           </div>
         </div>
       </div>

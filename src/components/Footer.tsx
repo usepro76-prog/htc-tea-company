@@ -22,10 +22,10 @@ export default function Footer({ setCurrentPage, openContactWhatsapp }: FooterPr
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">
             <h4 className="font-serif text-xl font-bold tracking-widest text-[#FAF8F5] uppercase">
-              PRANA TEA COLLECTIVE
+              THE HIND TEA COMPANY
             </h4>
             <p className="text-xs font-sans text-gold-400 font-semibold tracking-[0.2em] uppercase mt-0.5">
-              Natural Luxury Sourced Straight From The Forest
+              Pure Tea Craftsmanship — Sourced Direct from India's Estates
             </p>
           </div>
           <button
@@ -43,14 +43,14 @@ export default function Footer({ setCurrentPage, openContactWhatsapp }: FooterPr
         
         {/* Col 1: About the Brand Brief */}
         <div className="space-y-4">
-          <h5 className="text-[#FAF8F5] font-serif font-bold text-sm uppercase tracking-wider">The Prana Philosophy</h5>
+          <h5 className="text-[#FAF8F5] font-serif font-bold text-sm uppercase tracking-wider">The Hind Tea Philosophy</h5>
           <p className="text-xs text-gray-300 leading-relaxed font-light">
-            We are a conscious, ethically driven brand providing premium single-estate teas, organic botanicals, and handpicked elixirs. Sourced with zero middlemen, delivered to you in custom airtight gold vessels within days of harvest.
+            Based in Raviwar Peth, Pune, we are premium wholesale traders, suppliers, and retailers of elite-standard tea powders, restorative health infusions, and pure Arabica instant coffees. Free from artificial coloring, we serve exceptional tea solutions.
           </p>
           <div className="flex items-center gap-2">
             <ShieldCheck size={14} className="text-gold-500" />
             <span className="text-[10px] uppercase font-bold tracking-wider text-gold-400">
-              100% Carbon & Plastic Neutral
+              100% Pure & Hygienic | Certified
             </span>
           </div>
         </div>
@@ -64,7 +64,7 @@ export default function Footer({ setCurrentPage, openContactWhatsapp }: FooterPr
                 onClick={() => handleNavClick("shop")}
                 className="text-gray-300 hover:text-gold-300 transition-colors cursor-pointer text-left"
               >
-                ✦ Single-Origin Signature Teas
+                ✦ Assam Blend Tea Powder
               </button>
             </li>
             <li>
@@ -72,7 +72,7 @@ export default function Footer({ setCurrentPage, openContactWhatsapp }: FooterPr
                 onClick={() => handleNavClick("shop")}
                 className="text-gray-300 hover:text-gold-300 transition-colors cursor-pointer text-left"
               >
-                ✦ Wellness & Ayurvedic Blends
+                ✦ Green & Herbal Wellness
               </button>
             </li>
             <li>
@@ -80,7 +80,7 @@ export default function Footer({ setCurrentPage, openContactWhatsapp }: FooterPr
                 onClick={() => handleNavClick("shop")}
                 className="text-gray-300 hover:text-gold-300 transition-colors cursor-pointer text-left"
               >
-                ✦ Rare Ceremonial Uji Matcha
+                ✦ Premium Masala & Elaichi
               </button>
             </li>
             <li>
@@ -88,7 +88,7 @@ export default function Footer({ setCurrentPage, openContactWhatsapp }: FooterPr
                 onClick={() => handleNavClick("shop")}
                 className="text-gray-300 hover:text-gold-300 transition-colors cursor-pointer text-left"
               >
-                ✦ Magical Butterfly Pea Elixirs
+                ✦ Flavored Instant Coffee
               </button>
             </li>
           </ul>
@@ -111,7 +111,7 @@ export default function Footer({ setCurrentPage, openContactWhatsapp }: FooterPr
                 onClick={() => handleNavClick("about")}
                 className="text-gray-300 hover:text-gold-300 transition-colors cursor-pointer text-left"
               >
-                Our Botanical Story
+                Our Legacy Story
               </button>
             </li>
             <li>
@@ -135,11 +135,11 @@ export default function Footer({ setCurrentPage, openContactWhatsapp }: FooterPr
 
         {/* Col 4: Contact Shortcuts */}
         <div className="space-y-4">
-          <h5 className="text-[#FAF8F5] font-serif font-bold text-sm uppercase tracking-wider">Contact Headquarters</h5>
+          <h5 className="text-[#FAF8F5] font-serif font-bold text-sm uppercase tracking-wider">Pune Headquarters</h5>
           <ul className="space-y-3 text-xs text-gray-300">
             <li className="flex items-start gap-2.5">
               <MapPin size={14} className="text-gold-500 mt-0.5 flex-shrink-0" />
-              <span>Chamong Garden Estate, Higher Kurseong Range, Darjeeling, West Bengal, India</span>
+              <span>185, Raviwar Peth, Near Laxmi Road / Budhwar Peth, Pune, Maharashtra - 411002, India</span>
             </li>
             <li className="flex items-center gap-2.5">
               <Phone size={14} className="text-gold-500 flex-shrink-0" />
@@ -147,7 +147,7 @@ export default function Footer({ setCurrentPage, openContactWhatsapp }: FooterPr
             </li>
             <li className="flex items-center gap-2.5">
               <Mail size={14} className="text-gold-500 flex-shrink-0" />
-              <span>curators@pranateacollective.com</span>
+              <span>support@hindteacompany.com</span>
             </li>
           </ul>
         </div>
@@ -157,11 +157,11 @@ export default function Footer({ setCurrentPage, openContactWhatsapp }: FooterPr
       {/* Copy-fine-print section */}
       <div className="bg-emerald-995 text-gray-400 text-[10px] text-center py-6 px-6 border-t border-emerald-900/20">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p>© {currentYear} Prana Tea Collective Private Limited. Sourced directly, sealed on-site.</p>
+          <p>© {currentYear} The Hind Tea Company. Sourced directly, served with integrity.</p>
           <div className="flex gap-4">
             <span className="hover:text-gold-400 transition-colors">Premium Tea Craftsmanship</span>
             <span>|</span>
-            <span className="hover:text-gold-400 transition-colors">Direct Ethical Trade</span>
+            <span className="hover:text-gold-400 transition-colors">Direct Garden Sourcing</span>
           </div>
         </div>
       </div>

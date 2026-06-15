@@ -49,6 +49,10 @@
   animation: marquee-loop 35s linear infinite;
 }
 
+.animate-marquee-container:hover {
+  animation-play-state: paused !important;
+}
+
 /* Elegant scrollbars for responsive lists */
 ::-webkit-scrollbar {
   width: 5px;
